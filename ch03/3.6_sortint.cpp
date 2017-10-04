@@ -6,6 +6,7 @@
 #include<algorithm>
 #include<cmath>
 
+ 
 
 int main() { 
     int a, b, c = 0;
