@@ -7,6 +7,7 @@
 #include<cmath>
 
 
+
 int main() { 
     int a, b, c = 0;
     int min, mid, max = 0;
