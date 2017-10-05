@@ -22,28 +22,42 @@ int main() {
             mid = b;
             max = c;
             }
-        else {
-            mid = c;
-            max = b;
-            if (c<a) {
-                min=c;
-                mid=a;
+        else {   // b > c
+            
+            if (a <= c) {
+                mid = c;
+                max = b;
+            }
+            else { // a > c
+                min = c;
+                mid = a;
+                max = c;
                 }
             }
         }
-    
-    else {
+
+    else {  // a > b
         min = b;
-        max = a;
-        if (a < c) {
-            mid = a;
-            max = c;
-        }
-        else {
+        if (b < c) {
+            if (a < c) {
+                mid = a;
+                max = c;
+                }
+            else {  // a > c
                 mid = c;
                 max = a;
-                   }
-    }
+            }
+        }
+        else {  // b > c
+            min = c;
+            mid = b;
+            max = a;
+        }
+
+    }  
+    
+    
+    
 
     std::cout << min << ", " << mid << ", " << max << std::endl;
     
