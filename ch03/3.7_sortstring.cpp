@@ -15,37 +15,47 @@ int main() {
     std::cin >> s1 >> s2 >> s3;
     std::cout << std::endl;
     
-    if (s1 < s2) {
+     if (s1 < s2) {
         first = s1;
         if (s2 < s3) {
             second = s2;
             third = s3;
             }
-        else {
-            second = s3;
-            third = s2;
-            if (s3 < s1) {
+        else {   // s2 > s3
+            
+            if (s1 <= s3) {
+                second = s3;
+                third = s2;
+            }
+            else { // s1> s3
                 first = s3;
                 second = s1;
+                third = s3;
                 }
             }
         }
-    
-    else {
+
+    else {  // s1> s2
         first = s2;
-        third = s1;
-        if (s1 < s3) {
-            second = s1;
-            third = s3;
-        }
-        else {
+        if (s2 < s3) {
+            if (s1 < s3) {
+                second = s1;
+                third = s3;
+                }
+            else {  // s1> s3
                 second = s3;
                 third = s1;
-                   }
-    }
+            }
+        }
+        else {  // s2 > s3
+            first = s3;
+            second = s2;
+            third = s1;
+        }
 
-    std::cout << first << ", " << second << ", " << third << std::endl;
-    
+    }  
+
+    std::cout << first << ", " << second << ", " << third << std::endl; 
     return 0;
     
 }
