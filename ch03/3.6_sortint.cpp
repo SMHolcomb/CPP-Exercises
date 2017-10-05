@@ -55,12 +55,8 @@ int main() {
         }
 
     }  
-    
-    
-    
 
-    std::cout << min << ", " << mid << ", " << max << std::endl;
-    
+    std::cout << min << ", " << mid << ", " << max << std::endl; 
     return 0;
     
 }
